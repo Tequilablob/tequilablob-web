@@ -1,0 +1,17 @@
+# Site settings
+title: Tequilablob
+email: tequilablob@gmail.com
+description: "Description for site.  This will appear in document head meta for google search results and in your feed.xml site description"
+# url: "http://tequilablob.com"
+
+
+
+# Serve
+port: 4000
+host: 127.0.0.1
+baseurl: "/tequilablob-web"
+
+#compiling static site
+sass:
+    sass_dir: assets/css/_sass
+exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile']

@@ -1,0 +1,13 @@
+Gemfile.lock
+_site/
+.bundle
+.sass-cache
+.ruby-version
+coverage
+site/_site/
+bbin/
+gh-pages/
+.DS_Store
+*~
+pkg/
+test/dest
