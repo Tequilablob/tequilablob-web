@@ -1,7 +1,7 @@
 # Site settings
 title: Tequilablob
 email: tequilablob@gmail.com
-description: "Description for site.  This will appear in document head meta for google search results and in your feed.xml site description"
+description: "Gaming // Hardware // Benchmarks // Optimization"
 # url: "http://tequilablob.com"
 
 
@@ -14,4 +14,6 @@ baseurl: "/tequilablob-web"
 #compiling static site
 sass:
     sass_dir: assets/css/_sass
+
+#exclude from build into site folder
 exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile']
