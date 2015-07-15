@@ -14,6 +14,7 @@ baseurl: "/tequilablob-web"
 #compiling static site
 sass:
     sass_dir: assets/css/_sass
+    style: :nested
 
 #exclude from build into site folder
 exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile']

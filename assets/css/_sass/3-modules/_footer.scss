@@ -12,7 +12,7 @@ footer{
       width: 80px;
       float: left;
       margin-right: 30px;
-      background: rgba(0, 0, 0, 0.8);
+      background: $box-bg;
 
     }  // end logo
 
@@ -23,7 +23,7 @@ footer{
         //margin-left: 0;
         text-transform: uppercase;
         font-size: 12px;
-        color: #FF0000;
+        color: $primary-color;
 
 
       }  // end copyright
@@ -34,7 +34,7 @@ footer{
     {
       float: right;
       margin: 30px 30px 0 0;
-      background: $header-bg-color;
+      background: $box-bg;
 
       a
       {
@@ -47,7 +47,7 @@ footer{
         text-transform: uppercase;
 
         &:hover{
-          color: rgba(124,0,0,0.4);
+          color: $nav-link-color-hover;
         } // end hover
 
       }  // end a

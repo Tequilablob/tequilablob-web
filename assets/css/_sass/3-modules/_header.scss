@@ -2,20 +2,20 @@
 
 header
 {
-  height: 300px;
   background: url(../img/main/header-bg.jpg) center center;
   background-size: cover;
+  padding-bottom: 60px;
 
   .logo{  // box for logo svg.
     height: 80px;
     width: 80px;
     float: left;
     margin: 10px 0 0 30px;
-    background: rgba(0, 0, 0, 0.8);
+    background: $box-bg;
 
     .st0{
-      fill:#FF0000;  // changes the color of the logo
-      background: rgba(0, 0, 0, 0.9);  // this didn't do anything
+      fill: $primary-color;  // changes the color of the logo
+      background: $box-bg;  // this didn't do anything
     }  // end .st0 or SVG file
 
   }  // end logo
@@ -23,8 +23,8 @@ header
   nav
   {
     float: right;
-    margin: 30px 30px 0 0;
-    background: $header-bg-color;
+    padding: 30px 30px 0 0;
+    background: $box-bg;
 
     a
     {
@@ -32,13 +32,11 @@ header
       margin-left: 20px;
 
       color: $nav-link-color;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
+      @extend %small-bold;
 
       &:hover
       {
-        color: rgba(0,0,0,1);
+        color: $nav-link-color-hover;
       } // end hover
 
     } // end a
@@ -49,7 +47,7 @@ header
         text-align: center;
         font-size: 72px;
         font-weight: 700;
-        color: #FF0000;
+        color: $primary-color;
         text-transform: uppercase;
         letter-spacing: 0.04em;
         margin-bottom: 20px;
@@ -59,27 +57,39 @@ header
         span{
           display: inline-block;
           padding: 0.2em 0.5em;
-          border: #FF0000 solid 10px;
-          background: $header-bg-color;
+          border: $primary-color solid 10px;
+          background: $box-bg;
 
         }  // end span
 
       }  // end h1
 
         .kicker{
+          @extend %small-bold;
           text-align: center;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.04;
-          color:#FF0000;
+          letter-spacing: 0.05em;
+          color:$primary-color;
           line-height: 1;
 
           span{
             display: inline-block;
             padding: 0.2em 0.5em;
-            background: $header-bg-color;
+            background: $box-bg;
 
           } // end span
         } // end kicker
 
 }  // end header
+@media (max-width: 640px){
+  header {
+    background-position: 50% 20px, 50% 50%;
+    nav {
+      float:none;
+      text-align: center;
+      padding-top: 80px;
+    }// end nav
+    h1 {
+      padding-top: 0px;
+    }
+  }// end header-bg
+}

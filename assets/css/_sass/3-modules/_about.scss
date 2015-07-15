@@ -1,0 +1,97 @@
+h3{
+  @extend %small-bold;
+  color: $accent-color;
+  text-align: center;
+  padding-top: 100px 30px;
+}  // end h3
+
+.face-lockup {
+  max-width: 900px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+
+  .face-img{
+    height: 278px;
+    width: 200px;
+    background: url(/assets/img/about/face.jpg);
+    order: 3;
+  }  // end face-img
+
+  [class^="icon-"]{
+    height: 100px;
+    width: 100px;
+    background: $bg-color;
+    border-radius: 50%;
+    path {
+      fill: $accent-color;
+    }
+
+    &.icon-1{order: 1};
+    &.icon-2{order: 2};
+    &.icon-3{order: 4};
+    &.icon-4{order: 5};
+
+  }  // end all classes with icon
+
+}  // end face-lockup
+
+@media screen and (max-width: 640px)
+{
+  .face-lockup {
+    display: block;
+    text-align: center;
+
+    div {
+      display: inline-block;
+    }
+    [class^="icon-"]{
+      height: 50px;
+      width: 50px;
+      margin: 10px;
+    }
+
+    .face-img {
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: auto;
+      margin-bottom: 30px;
+
+    }// end face-img
+  }
+}  // end media screen
+
+.blurb {
+  max-width: 620px;
+  padding: 0 15px;
+  margin: 50px auto 50px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300;
+}  // end blurb
+
+.skill-lockup{
+  max-width: 700px;
+  margin: 100px auto;
+  color: #999;
+@include clearfix;
+  .skill-unit {
+    width: 350px;
+    float: left;
+
+  }
+
+  .skill-icons {
+    font-size: 0;
+    margin: 30px;
+
+    span {
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      background-color: $bg-color;
+    }
+  }
+}
