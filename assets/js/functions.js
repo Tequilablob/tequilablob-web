@@ -1,15 +1,25 @@
 $( function() {
-
-
-
+  smoothScrool(300);
 $("header h1").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' });
-});
+  });
 
 
+// smoothscroll function is applied from the document ready
+function smoothScrool (duration) {
+  $('a[href^="#"]').on('click', function(event) {
 
+    var target = $( $(this).attr('href') );
 
+    if( target.length ) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, duration);
+    }
+  });
+}
 
-// fit text
+// fit text function
   (function( $ ){
 
     $.fn.fitText = function( kompressor, options ) {
