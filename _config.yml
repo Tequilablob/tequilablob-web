@@ -1,11 +1,14 @@
 # Site settings
 title: Tequilablob
-email: tequilablob@gmail.com
 description: "Gaming // Hardware // Benchmarks // Optimization"
+email: tequilablob@gmail.com
 # url: "http://tequilablob.com"
 
-
-
+# Site default images and content can go here.
+bg-img: header-bg.jpg
+logo: logo.svg
+avatar: face.jpg
+blurb: <p><strong>The purpose of this site </strong>is to document my experiences with various gaming hardware and benchmarks. I have been performing benchmarks over the years and I thought this would be a good place to collect the information that I have logged.  This site is also for providing gaming information that hopefully someone might find usefull.</p>
 # Serve
 port: 4000
 host: 127.0.0.1

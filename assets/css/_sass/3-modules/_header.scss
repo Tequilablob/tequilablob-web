@@ -2,23 +2,23 @@
 
 header
 {
-  background: url(../img/main/header-bg.jpg) center center;
-  background-size: cover;
+  @extend %bg-img;
+  height: 300px;
+  background-position: 30px 20px, 50% 50%;
   padding-bottom: 60px;
 
-  .logo{  // box for logo svg.
-    height: 80px;
-    width: 80px;
-    float: left;
-    margin: 10px 0 0 30px;
-    background: $box-bg;
+//.logo{  // box for logo svg.
+//  height: 80px;
+//    width: 80px;
+//    float: left;
+//    margin: 10px 0 0 30px;
+//    background: $box-bg;
 
-    .st0{
-      fill: $primary-color;  // changes the color of the logo
-      background: $box-bg;  // this didn't do anything
-    }  // end .st0 or SVG file
+//    .st0{
+//      fill: $primary-color;  // changes the color of the logo
+//    }  // end .st0 or SVG file
 
-  }  // end logo
+//  }  // end logo
 
   nav
   {
@@ -68,7 +68,7 @@ header
           @extend %small-bold;
           text-align: center;
           letter-spacing: 0.05em;
-          color:$primary-color;
+          color:$accent-color;
           line-height: 1;
 
           span{

@@ -1,59 +1,67 @@
-footer{
-  background: url(../img/main/footer-bg.jpg);
-  background-size: cover;
-  height: 200px;
+footer
+{
+    @extend %bg-img;
+    //  background-image: url(../img/main/footer-bg.jpg);
+    //  background-repeat: no-repeat;
+    //  background-size: cover;
+    //  height: 200px;
 
-  .lockup{
-    padding: 50px 30px;
-    clear: both;
-
-    .logo{
-      height: 80px;
-      width: 80px;
-      float: left;
-      margin-right: 30px;
-      background: $box-bg;
-
-    }  // end logo
-
-    .content-wrap{
-      float: left;
-
-      .copyright{
-        //margin-left: 0;
-        text-transform: uppercase;
-        font-size: 12px;
-        color: $primary-color;
-
-
-      }  // end copyright
-
-    }  // end content-wrap
-
-    nav
+    .lockup
     {
-      float: right;
-      margin: 30px 30px 0 0;
-      background: $box-bg;
+        padding: 50px 30px;
 
-      a
-      {
-        display: inline-block;
-        //margin-left: 20px;
+        @include clearfix;
 
-        color: $nav-link-color;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
+        //  .logo{
+        //    @include size(80px);
+        //    float: left;
+        //    margin-right: 30px;
+        //    background: $box-bg;
 
-        &:hover{
-          color: $nav-link-color-hover;
-        } // end hover
+        //    }  // end logo
 
-      }  // end a
+        .content-wrap
+        {
+            float: left;
 
-    } // end nav
+            margin-left: 150px;
 
-  } // end lockup
+            background: $box-bg;
 
+            .copyright
+            {
+                font-size: 12px;
+
+                margin: 0;
+
+                text-transform: uppercase;
+
+                color: $accent-color;
+            }  // end copyright
+        }  // end content-wrap
+
+        //  nav
+        //  {
+        //    float: right;
+        //    margin: 30px 30px 0 0;
+        //    background: $box-bg;
+
+        a
+        {
+            display: inline-block;
+
+            margin-right: 30px;
+
+            color: $nav-link-color;
+
+            @extend %small-bold;
+
+            &:hover
+            {
+                color: $nav-link-color-hover;
+            } // end hover
+        }  // end a
+
+        //  } // end nav
+    } // end lockup
 }  // end footer
